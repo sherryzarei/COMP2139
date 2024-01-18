@@ -1,0 +1,32 @@
+﻿@model List<Project> //to be able to accept the list of projects
+@{
+    //razor block
+    ViewData["Title"] = "Projects";
+}
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach(var project in Model)
+            {
+                <tr>
+                    <th>@project.ProjectId</th>
+                    <th>@project.Name</th>
+                    <th>@project.</th>
+                </tr>  
+            }
+            
+        </tbody>
+    </table>
+}
+ 
