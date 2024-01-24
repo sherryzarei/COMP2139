@@ -5,6 +5,7 @@ namespace COMP2139_Labs.Controllers
 {
     public class ProjectController : Controller
     {
+        [HttpGet] 
         public IActionResult Index() //Actions in controllers are only methods
         {
             var projects = new List<Project>()
@@ -14,14 +15,23 @@ namespace COMP2139_Labs.Controllers
             return View(projects);  //finds the view from the method Index()
         }
 
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            var project = new Project { ProjectId = id, Name = "Project " + id, Description = "Details of project " + id };
+            return View(project);
+        }
+
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
-        public IActionResult Details()
+        [HttpPost]
+        public IActionResult Create(Project project)
         {
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
