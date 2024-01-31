@@ -9,7 +9,7 @@
 
 <form asp-controller="Project" asp-action="Create" method="post">
     <div>
-        <label asp-for="Name" class="control-label"></label>
+        <label asp-for="Name" class="control-label"></label>    //asp-for validation the names of the attributes  
         <input asp-for="Name" class="form-control"></>
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
