@@ -4,7 +4,10 @@
     ViewData["Title"] = "Projects";
 }
 
-@if (Model.Any()) // there is a list of projects (any data in model)
+<h2>Projects</h2>
+
+<a asp-controller="Project" asp-action="Create" class="btn btn-primary">Create New Project</a>
+@if (Model.Any())
 {
     <table class="table">
         <thead>
@@ -12,6 +15,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Action</th> <!-- Column fro action buttons Details, edit, delete -->
             </tr>
         </thead>
 
@@ -23,7 +27,13 @@
                     <th>@project.ProjectId</th>
                     <th>@project.Name</th>
                     <th>@project.Description</th>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@project.ProjectId" class="btn btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@project.ProjectId" class="btn btn-secondary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@project.ProjectId" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>  
+
             }
             
         </tbody>

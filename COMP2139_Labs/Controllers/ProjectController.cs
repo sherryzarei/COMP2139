@@ -33,13 +33,13 @@ namespace COMP2139_Labs.Controllers
         }
 
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Project project)
         {
             if (ModelState.IsValid)
@@ -110,5 +110,18 @@ namespace COMP2139_Labs.Controllers
             return View(project);
         }
 
+        [HttpPost, ActionName("DeleteConfirmed")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var project = _context.Projects.Find(id);
+            if(project != null)
+            {
+                _context.Projects.Remove(project);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return NotFound();
+        }
     }
 }
