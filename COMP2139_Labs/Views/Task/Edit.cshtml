@@ -1,31 +1,47 @@
 ﻿@model ProjectTask
 @{
     ViewData["Title"] = "Edit Task";
+
 }
 
-<form  asp-action="Edit" method="post">
-    @Html.HiddenFor(model => model.ProjectId)
+<h2>Edit Task</h2>
 
-    <div class="form-control">
-        <label asp-for="Title" class="control-label">Title</label>
-        <input asp-formaction="Title" class="form-control" />
+<form asp-controller="Task" asp-action="Edit" method="post">
+
+    @Html.HiddenFor(model => model.ProjectTaskId)
+
+    <div class="form_group">
+        <label asp-for="Title" class="control_label">Name</label>
+        <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
+
     </div>
 
-    <div class="form-control">
-        <label asp-for="Description" class="control-label">Description</label>
-        <input asp-formaction="Description" class="form-control" />
+    <div class="form_group">
+        <label asp-for="Description" class="control_label">Description</label>
+        <input asp-for="Description" class="form-control" />
         <span asp-validation-for="Description" class="text-danger"></span>
+
     </div>
 
-    <div class="form-control">
-        <label asp-for="Description" class="control-label">Project</label>
-        <select asp-for= "ProjectId" asp-items="ViewBag.Projects" class="form-control"></select>
+    <div class="form_group">
+        <label asp-for="ProjectId" class="control_label">Project</label>
+        <select asp-for="ProjectId" asp-items="ViewBag.Projects" class="form-control"> </select>
     </div>
 
-    <div class="form-group">
-        <input type="submit" value="save" class="btn btn-primary" />
-        <a asp-action="Index" asp-route-projectId="@Model.ProjectId" class="btn btn-secondary">Back to List</a>
+    <div class="form_group">
+
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" asp-route-projectID="@Model.ProjectId" class="btn btn-secondary">Back to List</a>
     </div>
+
+
 
 </form>
+
+@section Scripts {
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

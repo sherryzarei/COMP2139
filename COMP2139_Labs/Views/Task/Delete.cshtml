@@ -36,15 +36,9 @@
     </dl>
 </div>
 
-<form asp-action="DeleteConfirmed" method="post">
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.ProjectTaskId" method="post">
     @Html.HiddenFor(model => model.ProjectTaskId)
 
     <input type="submit" value="Delete" class="btn btn-danger" />
     <a asp-action="Index" asp-route-projectId="@Model.ProjectId" class="btn btn-secondary">Cancel</a>
 </form>
-
-@section Scripts
-    {
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-        

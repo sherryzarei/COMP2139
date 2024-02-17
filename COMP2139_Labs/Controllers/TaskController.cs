@@ -30,9 +30,9 @@ namespace COMP2139_Labs.Controllers
         {
             var task = _context.ProjectTasks
                         .Include(t => t.Project)
-                        .FirstOrDefault(task => task.ProjectId == id);
+                        .FirstOrDefault(t => t.ProjectTaskId == id); // Corrected to filter by ProjectTaskId
 
-            if(task == null)
+            if (task == null)
             {
                 return NotFound();
             }
@@ -70,7 +70,8 @@ namespace COMP2139_Labs.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind ("projecttaskId", "Title", "Description", "ProjectId")] ProjectTask task)
+
+        public IActionResult Edit(int id, [Bind("ProjectTaskId", "Title", "Description", "ProjectId")]ProjectTask task)
         {
             if(id != task.ProjectTaskId)
             {
@@ -82,8 +83,7 @@ namespace COMP2139_Labs.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index", new { ProjectId = task.ProjectId });
             }
-
-            ViewBag.Projects = new SelectList(_context.ProjectTasks, "ProjectId", "Name", task.ProjectId);
+            ViewBag.Projects = new SelectList(_context.Projects, "ProjectId", "Name", task.ProjectId);
             return View(task);
         }
 
@@ -104,30 +104,48 @@ namespace COMP2139_Labs.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var task = _context.ProjectTasks
-                       .Include(t => t.Project)
-                       .FirstOrDefault(t => t.ProjectTaskId == id);
+            var task = _context.ProjectTasks.Include(t => t.Project).FirstOrDefault(t => t.ProjectTaskId == id);
             if (task == null)
             {
                 return NotFound();
             }
             ViewBag.Projects = new SelectList(_context.Projects, "ProjectId", "Name", task.ProjectId);
             return View(task);
-            return View();
         }
 
-        [HttpPost, ActionName("DeeleteConfirmed")]
+        [HttpPost, ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int projectTaskId)
+        public IActionResult DeleteConfirmed(int ProjectTaskId)
         {
-            var task = _context.ProjectTasks.Find(projectTaskId);
-            if(task != null)
+            var task = _context.ProjectTasks.Find(ProjectTaskId);
+            if (task != null)
             {
                 _context.ProjectTasks.Remove(task);
                 _context.SaveChanges();
                 return RedirectToAction("Index", new { ProjectId = task.ProjectId });
             }
             return NotFound();
+        }
+
+        public async Task<IActionResult> Search(int? projectID, string searchString)
+        {
+            var taskQuery = _context.ProjectTasks.AsQueryable();
+
+            // if projectID was passed 
+            if (projectID.HasValue)
+            {
+                taskQuery = taskQuery.Where(t => t.ProjectId == projectID.Value);
+            }
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                taskQuery = taskQuery.Where(t => t.Title.Contains(searchString)
+                || t.Description.Contains(searchString));
+            }
+
+            var tasks = await taskQuery.ToListAsync();
+            ViewBag.projectID = projectID;
+            return View("Index", tasks);
         }
     }
 }
