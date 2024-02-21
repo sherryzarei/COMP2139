@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using COMP2139_Labs.Models;
 using COMP2139_Labs.Data;
+using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.EntityFrameworkCore;
+using COMP2139_Labs.Areas.ProjectManagement.Models;
 
-namespace COMP2139_Labs.Controllers
+namespace COMP2139_Labs.Areas.ProjectManagement.Controllers
 {
+    [Area("ProjectMnagement")]
+    [Route("[area]/[controller]/[action]")]
     public class ProjectController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -14,14 +17,14 @@ namespace COMP2139_Labs.Controllers
             _context = context;
         }
 
-        [HttpGet] 
+        [HttpGet("")]
         public IActionResult Index() //Actions in controllers are only methods
         {
             var projects = _context.Projects.ToList();
             return View(projects);  //finds the view from the method Index()
         }
 
-        [HttpGet]
+        [HttpGet("Details{id:int}")]
         public IActionResult Details(int id)
         {
             var project = _context.Projects.FirstOrDefault(p => p.ProjectId == id);
@@ -32,13 +35,13 @@ namespace COMP2139_Labs.Controllers
             return View(project);
         }
 
-        [HttpGet]
+        [HttpGet("Create")]
         public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Project project)
         {
@@ -48,10 +51,10 @@ namespace COMP2139_Labs.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(project);  
+            return View(project);
         }
 
-        [HttpGet]
+        [HttpGet("Edit({id:int})")]
         public IActionResult Edit(int id)
         {
             var project = _context.Projects.Find(id);
@@ -62,16 +65,16 @@ namespace COMP2139_Labs.Controllers
             return View(project);
         }
 
-        [HttpPost]
+        [HttpPost("Edit({id:int})")]
         [ValidateAntiForgeryToken]
-        public  IActionResult Edit(int id, [Bind("ProjectId, Name, Description, StartDate, EndDate, Status")]Project project)
+        public IActionResult Edit(int id, [Bind("ProjectId, Name, Description, StartDate, EndDate, Status")] Project project)
         {
-            if(id != project.ProjectId)
+            if (id != project.ProjectId)
             {
                 return NotFound();
             }
-            
-            if(ModelState.IsValid)
+
+            if (ModelState.IsValid)
             {
                 try
                 {
@@ -100,22 +103,23 @@ namespace COMP2139_Labs.Controllers
             return _context.Projects.Any(e => e.ProjectId == id);
         }
 
-        [HttpGet]
+        [HttpGet("Delete({id:int})")]
         public IActionResult Delete(int id)
         {
             var project = _context.Projects.FirstOrDefault(p => p.ProjectId == id);
-            if(project == null){
+            if (project == null)
+            {
                 return NotFound();
             }
             return View(project);
         }
 
-        [HttpPost, ActionName("DeleteConfirmed")]
+        [HttpPost("DeleteConfirmed({ProjectId:int})"), ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int ProjectId)
         {
             var project = _context.Projects.FirstOrDefault(p => p.ProjectId == ProjectId);
-            if(project != null)
+            if (project != null)
             {
                 _context.Projects.Remove(project);
                 _context.SaveChanges();
@@ -124,12 +128,13 @@ namespace COMP2139_Labs.Controllers
             return NotFound();
         }
 
+        [HttpGet("Search/{searchString?}")]
         public async Task<IActionResult> Search(string searchString)
         {
             var projectQuery = from p in _context.Projects
                                select p;
 
-            bool searchPerformed = !String.IsNullOrEmpty(searchString);
+            bool searchPerformed = !string.IsNullOrEmpty(searchString);
 
             if (searchPerformed)
             {

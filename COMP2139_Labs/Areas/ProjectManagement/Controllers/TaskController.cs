@@ -1,12 +1,14 @@
-﻿using COMP2139_Labs.Data;
-using COMP2139_Labs.Models;
+﻿using COMP2139_Labs.Areas.ProjectManagement.Models;
+using COMP2139_Labs.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace COMP2139_Labs.Controllers
+namespace COMP2139_Labs.Areas.ProjectManagement.Controllers
 {
+    [Area("ProjectMnagement")]
+    [Route("[area]/[controller]/[action]")]
     public class TaskController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -15,7 +17,7 @@ namespace COMP2139_Labs.Controllers
         {
             _context = context;
         }
-        [HttpGet]
+        [HttpGet("Index/{projectId:int}")]
         public IActionResult Index(int projectId)
         {
             var tasks = _context.ProjectTasks.Where(t => t.ProjectId == projectId)
@@ -25,7 +27,7 @@ namespace COMP2139_Labs.Controllers
             return View(tasks);
         }
 
-        [HttpGet]
+        [HttpGet("Details/{id:int}")]
         public IActionResult Details(int id)
         {
             var task = _context.ProjectTasks
@@ -39,7 +41,7 @@ namespace COMP2139_Labs.Controllers
             return View(task);
         }
 
-        [HttpPost]
+        [HttpPost("Create/{projectId:int}")]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("Title", "Description", "ProjectId")] ProjectTask task)
         {
@@ -47,17 +49,17 @@ namespace COMP2139_Labs.Controllers
             {
                 _context.ProjectTasks.Add(task);
                 _context.SaveChanges();
-                return RedirectToAction("Index", new { ProjectId = task.ProjectId});
+                return RedirectToAction("Index", new { task.ProjectId });
             }
             ViewBag.Projects = new SelectList(_context.ProjectTasks, "ProjectId", "Name", task.ProjectId);
             return View(task);
         }
 
-        [HttpGet]
+        [HttpGet("Create/{projectId:int}")]
         public IActionResult Create(int projectId)
         {
             var project = _context.Projects.Find(projectId);
-            if(project == null)
+            if (project == null)
             {
                 return NotFound();
             }
@@ -68,12 +70,12 @@ namespace COMP2139_Labs.Controllers
             return View(task);
         }
 
-        [HttpPost]
+        [HttpPost("Edit/{id:int}")]
         [ValidateAntiForgeryToken]
 
-        public IActionResult Edit(int id, [Bind("ProjectTaskId", "Title", "Description", "ProjectId")]ProjectTask task)
+        public IActionResult Edit(int id, [Bind("ProjectTaskId", "Title", "Description", "ProjectId")] ProjectTask task)
         {
-            if(id != task.ProjectTaskId)
+            if (id != task.ProjectTaskId)
             {
                 return NotFound();
             }
@@ -81,19 +83,19 @@ namespace COMP2139_Labs.Controllers
             {
                 _context.ProjectTasks.Update(task);
                 _context.SaveChanges();
-                return RedirectToAction("Index", new { ProjectId = task.ProjectId });
+                return RedirectToAction("Index", new { task.ProjectId });
             }
             ViewBag.Projects = new SelectList(_context.Projects, "ProjectId", "Name", task.ProjectId);
             return View(task);
         }
 
-        [HttpGet]
+        [HttpGet("Edit/{id:int}")]
         public IActionResult Edit(int id)
         {
             var task = _context.ProjectTasks
                         .Include(t => t.Project)
                         .FirstOrDefault(t => t.ProjectTaskId == id);
-            if(task == null)
+            if (task == null)
             {
                 return NotFound();
             }
@@ -101,7 +103,7 @@ namespace COMP2139_Labs.Controllers
             return View(task);
         }
 
-        [HttpGet]
+        [HttpGet("Delete/{id:int}")]
         public IActionResult Delete(int id)
         {
             var task = _context.ProjectTasks.Include(t => t.Project).FirstOrDefault(t => t.ProjectTaskId == id);
@@ -113,7 +115,7 @@ namespace COMP2139_Labs.Controllers
             return View(task);
         }
 
-        [HttpPost, ActionName("DeleteConfirmed")]
+        [HttpPost("DeleteConfirmed/{ProjectTaskId:int}"), ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int ProjectTaskId)
         {
@@ -122,11 +124,12 @@ namespace COMP2139_Labs.Controllers
             {
                 _context.ProjectTasks.Remove(task);
                 _context.SaveChanges();
-                return RedirectToAction("Index", new { ProjectId = task.ProjectId });
+                return RedirectToAction("Index", new { task.ProjectId });
             }
             return NotFound();
         }
 
+        [HttpGet("Search")]
         public async Task<IActionResult> Search(int? projectID, string searchString)
         {
             var taskQuery = _context.ProjectTasks.AsQueryable();

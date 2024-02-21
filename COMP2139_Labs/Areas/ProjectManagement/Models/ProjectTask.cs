@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace COMP2139_Labs.Models
+namespace COMP2139_Labs.Areas.ProjectManagement.Models
 {
     public class ProjectTask
     {
@@ -14,7 +14,7 @@ namespace COMP2139_Labs.Models
         public string? Description { get; set; }
 
         // Foreign key for project
-        public int ProjectId { get; set; }  
+        public int ProjectId { get; set; }
 
         // navigation property
         // This property allows for easy access to the related projecr entity from the task entity
