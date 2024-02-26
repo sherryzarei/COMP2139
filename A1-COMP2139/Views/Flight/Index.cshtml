@@ -1,0 +1,69 @@
+﻿@model List<Flight>
+@{
+    ViewData["Title"] = "Flights";
+    bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+    string searchString = ViewData["SearchString"] as string;
+}
+
+<style>
+    .flights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .flight-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flight-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div style="padding: 20px 80px">
+    <h2>Flights</h2>
+    <hr />
+    <!-- <a asp-action="Create" class="btn btn-primary" style="margin: 20px 0">Add new flight</a>  -->
+
+    @if (Model.Any())
+    {
+        <div class="flights-grid">
+            @foreach (var flight in Model)
+            {
+                <div class="flight-card">
+                    <img src="@("~/Images/Flights/"+flight.ImageName)" asp-append-version="true" width="150" height="100px" />
+                    <div>
+                        <strong>Flight Number:</strong> @flight.FlightNumber<br />
+                        <strong>Airline:</strong> @flight.Airline<br />
+                        <strong>Departure:</strong> @flight.Departure<br />
+                        <strong>Arrival:</strong> @flight.Arrival<br />
+                        <strong>Departure Time:</strong> @flight.DepartureDate<br />
+                        <strong>Arrival Time:</strong> @flight.DepartureDate<br />
+                        <strong>Price:</strong> $@flight.Price<br />
+                        <strong>Available Seats:</strong> @flight.Availability<br />
+                    </div>
+                    <div>
+                        <!-- <a asp-action="Edit" asp-route-id="@flight.FlightId" class="btn btn-secondary">Edit</a> -->
+                        <!-- <a asp-action="Delete" asp-route-id="@flight.FlightId" class="btn btn-danger">Delete</a> -->
+                        <a asp-action="Details" asp-route-id="@flight.FlightId" class="btn btn-success">Details</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else if (searchPerformed)
+    {
+        <p>No flights with the name or description "@searchString" were found.</p>
+    }
+    else
+    {
+        <p>No flights available.</p>
+    }
+</div>

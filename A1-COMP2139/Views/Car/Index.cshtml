@@ -1,0 +1,67 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Cars";
+    bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+    string searchString = ViewData["SearchString"] as string;
+}
+
+<style>
+    .cars-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 20px;
+        grid-template-columns:
+    }
+
+    .car-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .car-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div style="padding: 20px 80px">
+    <h2>Cars</h2>
+    <hr />
+    <!-- <a asp-action="Create" class="btn btn-primary" style="margin: 20px 0">Add new car</a> -->
+
+    @if (Model.Any())
+    {
+        <div class="cars-grid">
+            @foreach (var car in Model)
+            {
+                <div class="car-card">
+                    <img src="@("~/Images/Cars/"+car.ImageName)" asp-append-version="true" width="150" height="100px" />
+                    <div>
+                        <strong>Manufacturer:</strong> @car.Manufacturer<br />
+                        <strong>Model:</strong> @car.Model<br />
+                        <strong>Rental Company:</strong> @car.RentalCompany<br />                      
+                        <strong>Year:</strong> @car.Year<br />
+                        <strong>Price:</strong> $@car.Price<br />
+                    </div>
+                    <div>
+                        <!-- <a asp-action="Edit" asp-route-id="@car.CarId" class="btn btn-secondary">Edit</a> -->
+                        <!-- <a asp-action="Delete" asp-route-id="@car.CarId" class="btn btn-danger">Delete</a> -->
+                        <a asp-action="Details" asp-route-id="@car.CarId" class="btn btn-success">Details</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else if (searchPerformed)
+    {
+        <p>No cars with the name or description "@searchString" were found.</p>
+    }
+    else
+    {
+        <p>No Cars available.</p>
+    }
+</div>

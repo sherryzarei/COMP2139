@@ -1,0 +1,130 @@
+﻿@model Flight
+@{
+    ViewData["Title"] = "Flight Details";
+}
+
+<h2>Flight Details</h2>
+
+<div>
+    <img src="@("~/Images/Flights/"+@Model.ImageName)" asp-append-version="true" width="400px" height="400px" />
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FlightNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FlightNumber)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Airline)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Airline)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Departure)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Departure)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Arrival)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Arrival)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DepartureDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ArrivalDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ArrivalDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Availability)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Availability)
+        </dd>
+
+    </dl>
+</div>
+
+<div id="guestInfoForm">
+    <h4>Guest Information</h4>
+    <form id="guestForm">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+        <button type="button" id="submitGuestInfo" class="btn btn-primary">Submit Guest Information</button>
+        <a asp-action="Index" class="btn btn-secondary">Back To List</a>
+    </form>
+    <div id="errorContainer" class="mt-3" style="display: none;">
+        <div class="alert alert-danger" role="alert" id="errorText"></div>
+    </div>
+</div>
+
+<div id="bookingForm" style="display: none;">
+    <h4>Confirm Booking</h4>
+    <form id="bookingForm" asp-controller="Book" asp-action="BookFlight" method="post">
+        @Html.HiddenFor(model => model.FlightId)
+        <!-- Hidden fields for guest email and phone -->
+        <input type="hidden" id="guestEmail" name="guestEmail" />
+        <input type="hidden" id="guestNumber" name="guestNumber" />
+        <!-- Hidden field for the random receipt number -->
+        <input type="hidden" id="receiptNumber" name="receiptNumber" />
+        <input type="submit" value="Book" class="btn btn-success" />
+        <a asp-action="Index" class="btn btn-secondary">Back To List</a>
+    </form>
+</div>
+</div>
+
+<script>document.getElementById("submitGuestInfo").addEventListener("click", function () {
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+
+        if (!email || !phone) {
+            document.getElementById("errorText").textContent = "Both email and phone number are required.";
+            document.getElementById("errorContainer").style.display = "block";
+            return;
+        }
+
+        document.getElementById("guestEmail").value = email;
+        document.getElementById("guestNumber").value = phone;
+
+        // Generate random receipt number
+        var receiptNumber = generateReceiptNumber();
+        document.getElementById("receiptNumber").value = receiptNumber;
+
+        document.getElementById("guestInfoForm").style.display = "none";
+        document.getElementById("bookingForm").style.display = "block";
+    });
+
+    function generateReceiptNumber() {
+        // Generate random number
+        var randomNumber = Math.floor(Math.random() * 1000000);
+        // Ensure the number has 6 digits
+        return randomNumber.toString().padStart(6, '0');
+    }</script>
