@@ -1,0 +1,19 @@
+﻿@model COMP2139_Labs.Areas.ProjectManagement.Models
+
+<div class="project-summary">
+    <p>@Model.Name<br /></p>
+    <p>@Model.Description<br /></p>
+    <p>Start Date<br />@Model.StartDate.ToShortDateString</p>
+    <p>End Date<br />@Model.StartDate.ToShortDateString</p>
+    <p>Status<br />@Model;.Status<br /></p>
+
+    <p><b>Task</b></p>
+    <ul>
+        @foreach(var task in Model.Tasks)
+        {
+            <li>
+
+            </li>
+        }
+    </ul>
+</div>

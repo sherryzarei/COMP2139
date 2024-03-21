@@ -4,6 +4,8 @@ namespace COMP2139_Labs.Areas.ProjectManagement.Models
 {
     public class Project
     {
+        internal object Tasks;
+
         [Key]
         public int ProjectId { get; set; }
         [Required]
