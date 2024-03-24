@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace COMP2139_Labs.Areas.Components
+namespace COMP2139_Labs.Areas.ProjectManagement.Components
 {
     public class ProjectSummaryViewComponent : ViewComponent
     {
@@ -18,7 +18,7 @@ namespace COMP2139_Labs.Areas.Components
             var project = await _context.Projects
                 .Include(p => p.Tasks)
                 .FirstOrDefaultAsync(p => p.ProjectId == projectId);
-            if(projectId == null)
+            if (projectId == null)
             {
                 // handle the case when ...
                 return Content("project not found");

@@ -1,6 +1,8 @@
 ﻿@{
     // Partial view - _Navbar.cshtml
 }
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
 
 
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -29,8 +31,45 @@
                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><i class="fa-solid fa-circle-info"></i>About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="ProjectManagement" asp-controller="Project" asp-action="Index"><i class="fa-solid fa-list-check"></i>Projects</a>
+                    <a class="nav-link text-dark" asp-area="ProjectManagement" asp-controller="Project" asp-action="Index"> <i class="fa-solid fa-diagram-project"></i> Projects</a>
                 </li>
+
+                @if (SignInManager.IsSignedIn(User))
+                { 
+                    //profile
+                    <li class="nav-link">
+                        <a class="nav-link text-dark"
+                            asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage your account">
+                            <i class="fa fa-user-circle"></i> Profile
+                        </a>
+                    </li>
+
+                    //logout
+                    <li class="nav-item">
+                        <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                            <button type="submit" class="nav-link btn btn-link text-dark" style="cursor:pointer">Logout</button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    //login
+                    <li class="nav-link">
+                        <a class="nav-link text-dark"
+                            asp-area="Identity" asp-page="/Account/Login">
+                            <i class="fa fa-sign-in"></i>Login
+                        </a>
+                    </li>
+
+                    //register
+                    <li class="nav-link">
+                        <a class="nav-link text-dark" 
+                            asp-area="Identity" asp-page="/Account/Register">
+                            <i class="fa fa-user-plus"></i> Register
+                        </a>
+                    </li>
+                }
+      
             </ul>
         </div>
     </div>

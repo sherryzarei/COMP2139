@@ -4,8 +4,6 @@ namespace COMP2139_Labs.Areas.ProjectManagement.Models
 {
     public class Project
     {
-        internal object Tasks;
-
         [Key]
         public int ProjectId { get; set; }
         [Required]
@@ -31,5 +29,14 @@ namespace COMP2139_Labs.Areas.ProjectManagement.Models
         [Display(Name = "Status")]
         [StringLength(20, ErrorMessage = "Status cannot exceed 20 characters")]
         public string? Status { get; set; }
+        public List<ProjectTask> Tasks { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (EndDate > StartDate)
+            {
+                yield return new ValidationResult("End Date must be greater than Start Date", new[] { nameof(EndDate), nameof(StartDate) });
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@
 
         <tbody>
 
-            @foreach(var project in Model) //as being (var project in List<Project>)
+            @foreach (var project in Model) //as being (var project in List<Project>)
             {
                 <tr>
                     <th>@project.ProjectId</th>
@@ -30,7 +30,7 @@
                     <th>@project.Description</th>
 
                     <td>
-                        @await Component.InvokeAsync("ProjectSummary", new { projectId == project.ProjectId})
+                        @await Component.InvokeAsync("ProjectSummary", new { project.ProjectId })
                     </td>
 
                     <td>
@@ -39,10 +39,10 @@
                         <a asp-action="Delete" asp-route-id="@project.ProjectId" class="btn btn-danger">Delete</a>
                         <a asp-controller="Task" asp-action="Index" asp-route-projectId="@project.ProjectId" class="btn btn-success">View Tasks</a>
                     </td>
-                </tr>  
+                </tr>
 
             }
-            
+
         </tbody>
     </table>
 }
