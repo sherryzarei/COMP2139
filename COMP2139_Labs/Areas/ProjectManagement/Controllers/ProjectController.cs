@@ -3,9 +3,11 @@ using COMP2139_Labs.Data;
 using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.EntityFrameworkCore;
 using COMP2139_Labs.Areas.ProjectManagement.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace COMP2139_Labs.Areas.ProjectManagement.Controllers
 {
+    [Authorize]
     [Area("ProjectManagement")]
     [Route("[area]/[controller]/[action]")]
     public class ProjectController : Controller
