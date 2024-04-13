@@ -1,77 +1,84 @@
 ﻿@{
     // Partial view - _Navbar.cshtml
 }
-@using COMP2139_Labs.Areas.ProjectManagement.Models
+@using COMP2139_Labs.Models
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
-
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
     <div class="container-fluid">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">COMP2139_Labs</a>
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="logo"><i class="fa-solid fa-book-journal-whills"></i> Project Collaborator</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
 
-            <form class="d-flex" asp-controller="Home" asp-action="GeneralSearch" method="get">
-                <input class="form-control" type="text" placeholder="Search" name="SearchString" />
-                <select class="form-control btn btn-secondary dropdown-toggle" name="SearchType">
+            <form class="d-flex" asp-controller="Home" asp-action="GeneralSearch" method="get" style="margin-left: 1em;">
+                <input class="form-control" type="text" placeholder="Search" name="searchString" />
+                &nbsp;
+                <select class="form-control btn btn-secondary dropdown-toggle" name="searchType">
                     <option value="Projects">Projects</option>
                     <option value="Tasks">Tasks</option>
                 </select>
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                &nbsp;
+                <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-walkie-talkie"></i> Search</button>
+
             </form>
 
+
             <ul class="navbar-nav flex-grow-1 justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house-chimney"></i>Home</a>
+                <li class="nav-item m-1">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index"> <i class="fa-solid fa-house-user"></i> Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><i class="fa-solid fa-circle-info"></i>About</a>
+                <li class="nav-item m-1">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About"> <i class="fa-solid fa-circle-info"></i> About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="ProjectManagement" asp-controller="Project" asp-action="Index"> <i class="fa-solid fa-diagram-project"></i> Projects</a>
-                </li>
-
-            @if (SignInManager.IsSignedIn(User))
-            { 
-                //profile
-                <li class="nav-link">
-                    <a class="nav-link text-dark"
-                        asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage your account">
-                        <i class="fa fa-user-circle"></i> Profile
-                    </a>
+                <li class="nav-item m-1">
+                    <a class="nav-link text-white" asp-area="ProjectManagement" asp-controller="Project" asp-action="Index"> <i class="fa-solid fa-flask"></i> Projects</a>
                 </li>
 
-                //logout
-                <li class="nav-item">
-                    <form asp-area="Identity" asp-page="/Account/Logout" method="post">
-                        <button type="submit" class="nav-link btn btn-link text-dark" style="cursor:pointer">Logout</button>
-                    </form>
-                </li>
-            }
-            else
-            {
-                //login
-                <li class="nav-link">
-                    <a class="nav-link text-dark"
-                        asp-area="Identity" asp-page="/Account/Login">
-                        <i class="fa fa-sign-in"></i>Login
-                    </a>
-                </li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    @await Component.InvokeAsync("UserRole")
+                    <li class="nav-item d-flex align-items-center">
 
-                //register
-                <li class="nav-link">
-                    <a class="nav-link text-dark" 
-                        asp-area="Identity" asp-page="/Account/Register">
-                        <i class="fa fa-user-plus"></i> Register
-                    </a>
-                </li>
-            }
-      
+                        @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+                        {
+                            <img id="profilePicture" style="width: 40px; height:40px; object-fit:cover; border-radius: 20px; object-fit:cover; margin-right: 2px"
+                                 src="data:image/*; base64, @(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))" />
+                        }
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage your account">
+                            Hello @User.Identity?.Name
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                            <button type="submit" class="btn btn-link nav-link text-danger" style="cursor: pointer">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    //login
+                    <li class="nav-link">
+                        <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login" style="padding: 0;">
+                            <i class="fa-solid fa-right-to-bracket"></i> Login
+                        </a>
+                    </li>
+
+                    //register
+                    <li class="nav-link">
+                        <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register" style="padding: 0;">
+                            <i class="fa fa-user-plus"></i> Register
+                        </a>
+                    </li>
+                }
             </ul>
         </div>
     </div>
 </nav>
+

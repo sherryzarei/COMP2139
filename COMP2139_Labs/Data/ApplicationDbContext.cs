@@ -1,4 +1,5 @@
 ﻿using COMP2139_Labs.Areas.ProjectManagement.Models;
+using COMP2139_Labs.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

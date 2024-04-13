@@ -4,7 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
-using COMP2139_Labs.Areas.ProjectManagement.Models;
+using COMP2139_Labs.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
