@@ -1,0 +1,767 @@
+2024-04-11 21:37:27.574 -04:00 [INF] User profile is available. Using 'C:\Users\Somi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-11 21:37:36.543 -04:00 [INF] Executed DbCommand (1,899ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 21:37:36.711 -04:00 [WRN] Role fe7329a1-6366-439d-a8b6-a6c0b6abde0d validation failed: DuplicateRoleName.
+2024-04-11 21:37:36.738 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 21:37:36.743 -04:00 [WRN] Role 90779b39-543d-419e-812a-698ab30bcb60 validation failed: DuplicateRoleName.
+2024-04-11 21:37:36.800 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-11 21:37:36.832 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-11 21:37:38.509 -04:00 [INF] Now listening on: https://localhost:7179
+2024-04-11 21:37:38.511 -04:00 [INF] Now listening on: http://localhost:5293
+2024-04-11 21:37:38.514 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-11 21:37:38.515 -04:00 [INF] Hosting environment: Development
+2024-04-11 21:37:38.517 -04:00 [INF] Content root path: C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139
+2024-04-11 21:37:40.302 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 21:37:41.102 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 21:37:41.137 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 21:37:41.162 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 21:37:41.171 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 21:37:41.174 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 21:37:41.179 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 21:37:41.215 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 21:37:43.065 -04:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 21:37:43.193 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 21:37:43.214 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 21:37:43.954 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 21:37:44.094 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 195.5604ms
+2024-04-11 21:37:44.094 -04:00 [INF] Executed ViewResult - view Index executed in 2903.185ms.
+2024-04-11 21:37:44.110 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 21:37:44.117 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 2973.2439ms
+2024-04-11 21:37:44.121 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 21:37:44.146 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 3860.6366ms
+2024-04-11 21:37:44.514 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 21:37:44.527 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 21:37:44.541 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 26.8851ms
+2024-04-11 21:37:45.306 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 779.3909ms
+2024-04-11 22:29:22.503 -04:00 [INF] User profile is available. Using 'C:\Users\Somi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-11 22:29:31.144 -04:00 [INF] Executed DbCommand (140ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:29:31.431 -04:00 [WRN] Role 84199e81-a93b-42b3-ae27-04dbd4b6fd07 validation failed: DuplicateRoleName.
+2024-04-11 22:29:31.475 -04:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:29:31.484 -04:00 [WRN] Role b9545571-d47f-49bf-802a-a3c6aa3714b9 validation failed: DuplicateRoleName.
+2024-04-11 22:29:31.564 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-11 22:29:31.635 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-11 22:29:33.324 -04:00 [INF] Now listening on: https://localhost:7179
+2024-04-11 22:29:33.326 -04:00 [INF] Now listening on: http://localhost:5293
+2024-04-11 22:29:33.329 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-11 22:29:33.335 -04:00 [INF] Hosting environment: Development
+2024-04-11 22:29:33.386 -04:00 [INF] Content root path: C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139
+2024-04-11 22:29:36.945 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:29:37.593 -04:00 [INF] Handling request: /
+2024-04-11 22:29:38.330 -04:00 [INF] Executed DbCommand (243ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:29:38.761 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[ClaimType], [u].[ClaimValue], [u].[UserId]
+FROM [Identity].[UserClaims] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2024-04-11 22:29:38.868 -04:00 [INF] Executed DbCommand (26ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Name]
+FROM [Identity].[UserRoles] AS [u]
+INNER JOIN [Identity].[Role] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserId] = @__userId_0
+2024-04-11 22:29:38.894 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:29:38.927 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2024-04-11 22:29:38.943 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:29:38.954 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[ClaimType], [r].[ClaimValue]
+FROM [Identity].[RoleClaims] AS [r]
+WHERE [r].[RoleId] = @__role_Id_0
+2024-04-11 22:29:38.992 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:29:39.048 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:29:39.070 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:29:39.073 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:29:39.079 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:29:39.084 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:29:39.116 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:29:40.871 -04:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:29:40.959 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:29:41.592 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:29:42.070 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:29:42.116 -04:00 [INF] Finished handling request.
+2024-04-11 22:29:42.196 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 603.9571ms
+2024-04-11 22:29:42.745 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:29:42.806 -04:00 [INF] Executed ViewResult - view Index executed in 3687.3125ms.
+2024-04-11 22:29:42.877 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 3821.1263ms
+2024-04-11 22:29:42.958 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:29:44.414 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:29:42.960 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:29:45.523 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2564.8688ms
+2024-04-11 22:29:45.528 -04:00 [INF] Finished handling request.
+2024-04-11 22:29:45.679 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 8766.093ms
+2024-04-11 22:29:46.225 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3265.5204ms
+2024-04-11 22:29:55.217 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/flights - null null
+2024-04-11 22:29:55.243 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/flights - null null
+2024-04-11 22:29:55.442 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/flights - null null
+2024-04-11 22:29:55.220 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/hotels - null null
+2024-04-11 22:29:55.651 -04:00 [INF] Handling request: /flights
+2024-04-11 22:29:55.574 -04:00 [INF] Handling request: /flights
+2024-04-11 22:29:55.660 -04:00 [INF] Handling request: /flights
+2024-04-11 22:29:55.526 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/flights - null null
+2024-04-11 22:29:55.243 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/hotels - null null
+2024-04-11 22:29:56.057 -04:00 [INF] Handling request: /hotels
+2024-04-11 22:29:56.073 -04:00 [INF] Handling request: /flights
+2024-04-11 22:29:56.078 -04:00 [INF] Handling request: /hotels
+2024-04-11 22:29:56.617 -04:00 [ERR] An unhandled exception has occurred.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+A1_COMP2139.Controllers.HotelController.Create (A1-COMP2139)
+A1_COMP2139.Controllers.HotelController.Delete (A1-COMP2139)
+A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at A1_COMP2139.Controllers.LoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\LoggingMiddleware.cs:line 22
+   at A1_COMP2139.Controllers.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\ErrorHandlingMiddleware.cs:line 21
+2024-04-11 22:29:56.617 -04:00 [ERR] An unhandled exception has occurred.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+A1_COMP2139.Controllers.HotelController.Create (A1-COMP2139)
+A1_COMP2139.Controllers.HotelController.Delete (A1-COMP2139)
+A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at A1_COMP2139.Controllers.LoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\LoggingMiddleware.cs:line 22
+   at A1_COMP2139.Controllers.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\ErrorHandlingMiddleware.cs:line 21
+2024-04-11 22:29:56.624 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)'
+2024-04-11 22:29:56.624 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)'
+2024-04-11 22:29:56.624 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)'
+2024-04-11 22:29:56.624 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)'
+2024-04-11 22:29:56.740 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/hotels - 500 null null 1520.8013ms
+2024-04-11 22:29:56.750 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/hotels - 500 null null 1507.4482ms
+2024-04-11 22:29:56.775 -04:00 [INF] Route matched with {action = "Details", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:29:56.775 -04:00 [INF] Route matched with {action = "Details", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:29:56.775 -04:00 [INF] Route matched with {action = "Details", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:29:56.775 -04:00 [INF] Route matched with {action = "Details", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:29:56.805 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.805 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.806 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.805 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.807 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.809 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.813 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.814 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.903 -04:00 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[FlightId] = @__id_0
+2024-04-11 22:29:56.908 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[FlightId] = @__id_0
+2024-04-11 22:29:56.927 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[FlightId] = @__id_0
+2024-04-11 22:29:56.945 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[FlightId] = @__id_0
+2024-04-11 22:29:56.950 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.955 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.958 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.961 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.963 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.964 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.966 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.969 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:29:56.975 -04:00 [INF] Executing ViewResult, running view Details.
+2024-04-11 22:29:56.975 -04:00 [INF] Executing ViewResult, running view Details.
+2024-04-11 22:29:56.977 -04:00 [INF] Executing ViewResult, running view Details.
+2024-04-11 22:29:56.980 -04:00 [INF] Executing ViewResult, running view Details.
+2024-04-11 22:31:36.923 -04:00 [INF] User profile is available. Using 'C:\Users\Somi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-11 22:31:41.496 -04:00 [INF] Executed DbCommand (132ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:31:41.848 -04:00 [WRN] Role 34565d9e-2058-40e3-a465-859aefdc1f17 validation failed: DuplicateRoleName.
+2024-04-11 22:31:41.877 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:31:41.928 -04:00 [WRN] Role 54a0920f-e9b6-417e-833c-c90e4646a530 validation failed: DuplicateRoleName.
+2024-04-11 22:31:42.001 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-11 22:31:42.055 -04:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-11 22:31:43.764 -04:00 [INF] Now listening on: https://localhost:7179
+2024-04-11 22:31:43.772 -04:00 [INF] Now listening on: http://localhost:5293
+2024-04-11 22:31:43.776 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-11 22:31:43.777 -04:00 [INF] Hosting environment: Development
+2024-04-11 22:31:43.779 -04:00 [INF] Content root path: C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139
+2024-04-11 22:31:47.628 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:31:48.450 -04:00 [INF] Handling request: /
+2024-04-11 22:31:48.682 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:31:48.777 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:31:48.794 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:31:48.798 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:31:48.807 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:31:48.810 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:31:48.837 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:31:50.975 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:31:51.242 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:31:51.312 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:31:51.784 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:31:51.803 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:31:51.838 -04:00 [INF] Finished handling request.
+2024-04-11 22:31:52.215 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 430.2088ms
+2024-04-11 22:31:52.321 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:31:52.591 -04:00 [INF] Executed ViewResult - view Index executed in 3765.4999ms.
+2024-04-11 22:31:52.610 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 3827.0775ms
+2024-04-11 22:31:52.621 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:31:52.726 -04:00 [INF] Finished handling request.
+2024-04-11 22:31:52.748 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:31:52.751 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:31:52.817 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 5244.2307ms
+2024-04-11 22:31:52.871 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 119.7685ms
+2024-04-11 22:31:53.126 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 378.3482ms
+2024-04-11 22:32:02.795 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/cars - null null
+2024-04-11 22:32:02.850 -04:00 [INF] Handling request: /cars
+2024-04-11 22:32:03.374 -04:00 [ERR] An unhandled exception has occurred.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+A1_COMP2139.Controllers.CarController.Search (A1-COMP2139)
+A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at A1_COMP2139.Controllers.LoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\LoggingMiddleware.cs:line 22
+   at A1_COMP2139.Controllers.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\ErrorHandlingMiddleware.cs:line 21
+2024-04-11 22:32:03.451 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/cars - 500 null null 658.4621ms
+2024-04-11 22:32:08.427 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:32:08.445 -04:00 [INF] Handling request: /
+2024-04-11 22:32:08.491 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:32:08.498 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:32:08.505 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:08.508 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:08.510 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:08.512 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:08.515 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:32:08.572 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:32:08.774 -04:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:32:08.812 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:32:09.393 -04:00 [INF] Executed ViewResult - view Index executed in 879.2542ms.
+2024-04-11 22:32:09.407 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 902.9173ms
+2024-04-11 22:32:09.417 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:32:09.429 -04:00 [INF] Finished handling request.
+2024-04-11 22:32:09.468 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 1042.5354ms
+2024-04-11 22:32:09.480 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:32:10.112 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 632.2905ms
+2024-04-11 22:32:13.931 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/cars - null null
+2024-04-11 22:32:13.940 -04:00 [INF] Handling request: /cars
+2024-04-11 22:32:14.210 -04:00 [ERR] An unhandled exception has occurred.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+A1_COMP2139.Controllers.CarController.Search (A1-COMP2139)
+A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at A1_COMP2139.Controllers.LoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\LoggingMiddleware.cs:line 22
+   at A1_COMP2139.Controllers.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139\Controllers\ErrorHandlingMiddleware.cs:line 21
+2024-04-11 22:32:14.226 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/cars - 500 null null 294.8043ms
+2024-04-11 22:32:16.410 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:32:16.424 -04:00 [INF] Handling request: /
+2024-04-11 22:32:16.427 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:32:16.434 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:32:16.447 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:16.456 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:16.459 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:16.463 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:32:16.470 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:32:16.494 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:32:16.690 -04:00 [INF] Executed DbCommand (23ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:32:16.741 -04:00 [INF] Executed DbCommand (31ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:32:17.897 -04:00 [INF] Executed ViewResult - view Index executed in 1427.515ms.
+2024-04-11 22:32:17.908 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 1460.923ms
+2024-04-11 22:32:17.913 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:32:17.922 -04:00 [INF] Finished handling request.
+2024-04-11 22:32:17.926 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 1515.53ms
+2024-04-11 22:32:17.960 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:32:18.852 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 892.6442ms
+2024-04-11 22:32:25.070 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/flights - null null
+2024-04-11 22:32:25.094 -04:00 [INF] Handling request: /flights
+2024-04-11 22:32:25.105 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)'
+2024-04-11 22:32:25.141 -04:00 [INF] Route matched with {action = "Details", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(Int32) on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:32:25.191 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:32:25.197 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:32:25.278 -04:00 [INF] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[FlightId] = @__id_0
+2024-04-11 22:32:25.287 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:32:25.290 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Details (A1-COMP2139)
+2024-04-11 22:32:25.297 -04:00 [INF] Executing ViewResult, running view Details.
+2024-04-11 22:44:18.557 -04:00 [INF] User profile is available. Using 'C:\Users\Somi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-11 22:44:22.698 -04:00 [INF] Executed DbCommand (154ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:44:22.890 -04:00 [WRN] Role 713e447a-e825-422b-997a-8e85b3bd50a8 validation failed: DuplicateRoleName.
+2024-04-11 22:44:22.916 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:44:22.922 -04:00 [WRN] Role e173988b-1f7d-4654-8ff6-74377d48de6b validation failed: DuplicateRoleName.
+2024-04-11 22:44:22.993 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-11 22:44:23.044 -04:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-11 22:44:24.597 -04:00 [INF] Now listening on: https://localhost:7179
+2024-04-11 22:44:24.609 -04:00 [INF] Now listening on: http://localhost:5293
+2024-04-11 22:44:24.618 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-11 22:44:24.640 -04:00 [INF] Hosting environment: Development
+2024-04-11 22:44:24.642 -04:00 [INF] Content root path: C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139
+2024-04-11 22:44:27.242 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:44:28.330 -04:00 [INF] Handling request: /
+2024-04-11 22:44:28.611 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:44:28.663 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:44:28.695 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:44:28.697 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:44:28.704 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:44:28.706 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:44:28.737 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:44:30.510 -04:00 [INF] Executed DbCommand (36ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:44:30.720 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:44:30.826 -04:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:44:33.014 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:44:33.291 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:44:33.366 -04:00 [INF] Finished handling request.
+2024-04-11 22:44:33.516 -04:00 [INF] Executed ViewResult - view Index executed in 4784.9127ms.
+2024-04-11 22:44:33.651 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:44:33.757 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:44:33.822 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 1533.1925ms
+2024-04-11 22:44:33.940 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 288.7674ms
+2024-04-11 22:44:33.861 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 5175.2545ms
+2024-04-11 22:44:33.963 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:44:33.978 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:44:33.986 -04:00 [INF] Finished handling request.
+2024-04-11 22:44:34.024 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 6803.7206ms
+2024-04-11 22:44:34.220 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 463.0235ms
+2024-04-11 22:44:42.975 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Flight/Index - null null
+2024-04-11 22:44:43.374 -04:00 [INF] Handling request: /Flight/Index
+2024-04-11 22:44:43.427 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)'
+2024-04-11 22:44:43.440 -04:00 [INF] Route matched with {action = "Index", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:44:43.448 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:44:43.453 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:44:43.572 -04:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[Availability] > 0
+2024-04-11 22:44:43.659 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:44:43.662 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:44:43.670 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:44:43.813 -04:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:44:43.984 -04:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:44:44.011 -04:00 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:44:44.141 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:44:44.158 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:44:44.181 -04:00 [INF] Finished handling request.
+2024-04-11 22:44:44.191 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 48.6627ms
+2024-04-11 22:44:44.453 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:44:44.976 -04:00 [INF] Executed ViewResult - view Index executed in 1311.6559ms.
+2024-04-11 22:44:45.064 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:44:45.064 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:44:45.064 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Images/Flights/Air-Canada-Logo240010654242605654.png?v=1K6c_mJCHJ14oApce-TIgnAYqoIqsOy_ZgBhWQCdWjs - null null
+2024-04-11 22:44:45.288 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 224.3642ms
+2024-04-11 22:44:45.376 -04:00 [INF] Handling request: /Images/Flights/Air-Canada-Logo240010654242605654.png
+2024-04-11 22:44:45.279 -04:00 [INF] Executed action A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139) in 1832.2306ms
+2024-04-11 22:44:45.390 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 326.402ms
+2024-04-11 22:44:45.461 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)'
+2024-04-11 22:44:45.554 -04:00 [INF] Finished handling request.
+2024-04-11 22:44:45.475 -04:00 [INF] The file /Images/Flights/Air-Canada-Logo240010654242605654.png was not modified
+2024-04-11 22:44:45.558 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Flight/Index - 200 null text/html; charset=utf-8 2583.6664ms
+2024-04-11 22:44:45.563 -04:00 [INF] Finished handling request.
+2024-04-11 22:44:45.587 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Images/Flights/Air-Canada-Logo240010654242605654.png?v=1K6c_mJCHJ14oApce-TIgnAYqoIqsOy_ZgBhWQCdWjs - 304 null image/png 522.9614ms
+2024-04-11 22:48:16.273 -04:00 [INF] User profile is available. Using 'C:\Users\Somi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-11 22:48:20.523 -04:00 [INF] Executed DbCommand (226ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:48:20.934 -04:00 [WRN] Role ef7ea18f-549c-46b4-8ab3-587ead2f9dc8 validation failed: DuplicateRoleName.
+2024-04-11 22:48:20.967 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2024-04-11 22:48:20.975 -04:00 [WRN] Role 501f9aba-0ec2-4ece-90f5-1debe56a6d6b validation failed: DuplicateRoleName.
+2024-04-11 22:48:21.050 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__superUser_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN NOT EXISTS (
+        SELECT 1
+        FROM [Identity].[User] AS [u]
+        WHERE [u].[Id] = @__superUser_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-04-11 22:48:21.121 -04:00 [INF] Executed DbCommand (32ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-04-11 22:48:23.025 -04:00 [INF] Now listening on: https://localhost:7179
+2024-04-11 22:48:23.027 -04:00 [INF] Now listening on: http://localhost:5293
+2024-04-11 22:48:23.031 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-11 22:48:23.058 -04:00 [INF] Hosting environment: Development
+2024-04-11 22:48:23.069 -04:00 [INF] Content root path: C:\Users\Somi\Desktop\Semester 4\ASP.NET\Assignment1\A1-COMP2139
+2024-04-11 22:48:25.139 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:48:26.265 -04:00 [INF] Handling request: /
+2024-04-11 22:48:26.513 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:48:26.573 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:48:26.597 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:26.601 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:26.608 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:26.610 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:26.645 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:48:28.485 -04:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:48:28.705 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:48:28.776 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:48:29.615 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:48:30.352 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:48:30.459 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:30.520 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 906.9097ms
+2024-04-11 22:48:30.949 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:48:31.006 -04:00 [INF] Executed ViewResult - view Index executed in 4373.5619ms.
+2024-04-11 22:48:31.159 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:48:31.161 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:48:31.190 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 4600.5386ms
+2024-04-11 22:48:31.228 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 68.5077ms
+2024-04-11 22:48:33.853 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:48:34.364 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3198.3618ms
+2024-04-11 22:48:35.647 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:35.710 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 10592.3316ms
+2024-04-11 22:48:45.149 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Hotel/Index - null null
+2024-04-11 22:48:45.171 -04:00 [INF] Handling request: /Hotel/Index
+2024-04-11 22:48:45.223 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)'
+2024-04-11 22:48:45.243 -04:00 [INF] Route matched with {action = "Index", controller = "Hotel", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HotelController (A1-COMP2139).
+2024-04-11 22:48:45.249 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)
+2024-04-11 22:48:45.253 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)
+2024-04-11 22:48:45.690 -04:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Amenities], [h].[Availability], [h].[HotelName], [h].[ImageName], [h].[Location], [h].[Price]
+FROM [Identity].[Hotels] AS [h]
+WHERE [h].[Availability] > 0
+2024-04-11 22:48:45.701 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)
+2024-04-11 22:48:45.703 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)
+2024-04-11 22:48:45.708 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:48:45.750 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:48:45.879 -04:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:48:45.890 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:48:46.005 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:48:46.025 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:48:46.040 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:46.067 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 61.2773ms
+2024-04-11 22:48:46.138 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:48:46.263 -04:00 [INF] Executed ViewResult - view Index executed in 557.4753ms.
+2024-04-11 22:48:46.269 -04:00 [INF] Executed action A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139) in 1021.4587ms
+2024-04-11 22:48:46.272 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HotelController.Index (A1-COMP2139)'
+2024-04-11 22:48:46.276 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:46.279 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Hotel/Index - 200 null text/html; charset=utf-8 1133.0478ms
+2024-04-11 22:48:46.311 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:48:46.311 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:48:46.318 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 7.4774ms
+2024-04-11 22:48:46.385 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.082ms
+2024-04-11 22:48:48.993 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Flight/Index - null null
+2024-04-11 22:48:49.048 -04:00 [INF] Handling request: /Flight/Index
+2024-04-11 22:48:49.063 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)'
+2024-04-11 22:48:49.071 -04:00 [INF] Route matched with {action = "Index", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:48:49.078 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:49.080 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:49.100 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[Availability] > 0
+2024-04-11 22:48:49.185 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:49.195 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:49.208 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:48:49.364 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:48:49.558 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:48:49.577 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:48:49.676 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:48:49.788 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:48:49.793 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:49.795 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 119.1309ms
+2024-04-11 22:48:49.866 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:48:50.251 -04:00 [INF] Executed ViewResult - view Index executed in 1048.0563ms.
+2024-04-11 22:48:50.286 -04:00 [INF] Executed action A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139) in 1208.5632ms
+2024-04-11 22:48:50.309 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:48:50.310 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:48:50.317 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)'
+2024-04-11 22:48:50.326 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 17.0681ms
+2024-04-11 22:48:50.343 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:50.352 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Flight/Index - 200 null text/html; charset=utf-8 1361.4031ms
+2024-04-11 22:48:50.770 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 460.0337ms
+2024-04-11 22:48:52.942 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Car/Index - null null
+2024-04-11 22:48:52.954 -04:00 [INF] Handling request: /Car/Index
+2024-04-11 22:48:52.958 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)'
+2024-04-11 22:48:52.962 -04:00 [INF] Route matched with {action = "Index", controller = "Car", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.CarController (A1-COMP2139).
+2024-04-11 22:48:52.967 -04:00 [INF] Executing action: A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)
+2024-04-11 22:48:52.970 -04:00 [INF] Executing action: A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)
+2024-04-11 22:48:52.996 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CarId], [c].[Availability], [c].[ImageName], [c].[Manufacturer], [c].[Model], [c].[Price], [c].[RentalCompany], [c].[Year]
+FROM [Identity].[Cars] AS [c]
+WHERE [c].[Availability] > 0
+2024-04-11 22:48:53.029 -04:00 [INF] Executed action: A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)
+2024-04-11 22:48:53.031 -04:00 [INF] Executed action: A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)
+2024-04-11 22:48:53.037 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:48:53.118 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:48:53.194 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:48:53.203 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:48:53.290 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:48:53.313 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:48:53.322 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:53.327 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 38.2921ms
+2024-04-11 22:48:53.331 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:48:53.526 -04:00 [INF] Executed ViewResult - view Index executed in 491.1009ms.
+2024-04-11 22:48:53.528 -04:00 [INF] Executed action A1_COMP2139.Controllers.CarController.Index (A1-COMP2139) in 562.0032ms
+2024-04-11 22:48:53.531 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.CarController.Index (A1-COMP2139)'
+2024-04-11 22:48:53.536 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:53.542 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Car/Index - 200 null text/html; charset=utf-8 600.5549ms
+2024-04-11 22:48:53.589 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:48:53.589 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:48:53.605 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Images/Cars/c2241149704243430237.jpg?v=QCO9pmSjixxLul-VG3L0WDKhZbjCOKLv8skHfeEkQ64 - null null
+2024-04-11 22:48:53.632 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 42.9655ms
+2024-04-11 22:48:53.694 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.5779ms
+2024-04-11 22:48:53.700 -04:00 [INF] Handling request: /Images/Cars/c2241149704243430237.jpg
+2024-04-11 22:48:53.736 -04:00 [INF] The file /Images/Cars/c2241149704243430237.jpg was not modified
+2024-04-11 22:48:53.744 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:53.745 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Images/Cars/c2241149704243430237.jpg?v=QCO9pmSjixxLul-VG3L0WDKhZbjCOKLv8skHfeEkQ64 - 304 null image/jpeg 139.9894ms
+2024-04-11 22:48:54.443 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/Flight/Index - null null
+2024-04-11 22:48:54.483 -04:00 [INF] Handling request: /Flight/Index
+2024-04-11 22:48:54.489 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)'
+2024-04-11 22:48:54.496 -04:00 [INF] Route matched with {action = "Index", controller = "Flight", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.FlightController (A1-COMP2139).
+2024-04-11 22:48:54.499 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:54.500 -04:00 [INF] Executing action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:54.517 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FlightId], [f].[Airline], [f].[Arrival], [f].[ArrivalDate], [f].[Availability], [f].[Departure], [f].[DepartureDate], [f].[FlightNumber], [f].[ImageName], [f].[Price]
+FROM [Identity].[Flights] AS [f]
+WHERE [f].[Availability] > 0
+2024-04-11 22:48:54.520 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:54.525 -04:00 [INF] Executed action: A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)
+2024-04-11 22:48:54.527 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:48:54.544 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:48:54.651 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:48:54.679 -04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:48:54.902 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:48:55.822 -04:00 [INF] Executed ViewResult - view Index executed in 1296.0136ms.
+2024-04-11 22:48:55.896 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:48:56.147 -04:00 [INF] Executed action A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139) in 1648.1197ms
+2024-04-11 22:48:55.955 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:48:55.901 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:48:56.165 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 268.6001ms
+2024-04-11 22:48:56.181 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.FlightController.Index (A1-COMP2139)'
+2024-04-11 22:48:56.184 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:56.238 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 337.1799ms
+2024-04-11 22:48:56.264 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:56.283 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 1381.1415ms
+2024-04-11 22:48:57.149 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/Flight/Index - 200 null text/html; charset=utf-8 2705.7371ms
+2024-04-11 22:48:57.160 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:48:58.802 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/ - null null
+2024-04-11 22:48:58.917 -04:00 [INF] Handling request: /
+2024-04-11 22:48:58.920 -04:00 [INF] Executing endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:48:58.923 -04:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller A1_COMP2139.Controllers.HomeController (A1-COMP2139).
+2024-04-11 22:48:58.927 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:58.930 -04:00 [INF] Executing action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:58.932 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:58.935 -04:00 [INF] Executed action: A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)
+2024-04-11 22:48:58.940 -04:00 [INF] Executing ViewResult, running view Index.
+2024-04-11 22:48:58.950 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[ProfilePicture], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[usernameChangeLimit]
+FROM [Identity].[User] AS [u]
+WHERE [u].[Id] = @__p_0
+2024-04-11 22:48:59.017 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Identity].[Role] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-04-11 22:48:59.025 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [Identity].[UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-04-11 22:48:59.116 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/A1-COMP_2139 - null null
+2024-04-11 22:48:59.644 -04:00 [INF] Handling request: /A1-COMP_2139
+2024-04-11 22:48:59.658 -04:00 [INF] Executed ViewResult - view Index executed in 718.7857ms.
+2024-04-11 22:48:59.659 -04:00 [INF] Finished handling request.
+2024-04-11 22:48:59.765 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-11 22:48:59.766 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - null null
+2024-04-11 22:48:59.829 -04:00 [INF] Executed action A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139) in 902.8194ms
+2024-04-11 22:48:59.845 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 79.5243ms
+2024-04-11 22:48:59.830 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/A1-COMP_2139 - 404 0 null 713.635ms
+2024-04-11 22:49:00.336 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - 200 null text/javascript; charset=UTF-8 570.2745ms
+2024-04-11 22:49:00.716 -04:00 [INF] Executed endpoint 'A1_COMP2139.Controllers.HomeController.Index (A1-COMP2139)'
+2024-04-11 22:49:01.159 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7179/A1-COMP_2139, Response status code: 404
+2024-04-11 22:49:01.220 -04:00 [INF] Finished handling request.
+2024-04-11 22:49:01.540 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7179/ - 200 null text/html; charset=utf-8 2738.4499ms

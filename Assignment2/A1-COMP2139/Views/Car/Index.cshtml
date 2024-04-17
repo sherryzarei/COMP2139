@@ -1,0 +1,127 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Cars";
+    bool searchPerformed = ViewData["SearchPerformed"] as bool? ?? false;
+    string searchString = ViewData["SearchString"] as string;
+}
+
+<style>
+    .cars-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .car-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .car-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div style="padding: 20px 80px">
+    <h2>Cars</h2>
+    <hr />
+    @if (User.IsInRole("SuperAdmin"))
+    {
+        <a asp-action="Create" class="btn btn-primary" style="margin: 20px 0">Add new car</a> 
+    }
+
+    <div class="container">
+        <b>Search by : </b>
+        <select id="SearchBy">
+            <option value="Company">Company</option>
+            <option value="CarModel">CarModel</option>
+        </select> <br />
+        @Html.TextBox("Search") <input type="submit" id="SearchBtn" value="Search"> <br /> <br />
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="cars-grid">
+            @foreach (var car in Model)
+            {
+                <div class="car-card">
+                    <img src="@("~/Images/Cars/"+car.ImageName)" asp-append-version="true" width="150" height="100px" />
+                    <div>
+                        <strong>Manufacturer:</strong> @car.Manufacturer<br />
+                        <strong>Model:</strong> @car.Model<br />
+                        <strong>Rental Company:</strong> @car.RentalCompany<br />                      
+                        <strong>Year:</strong> @car.Year<br />
+                        <strong>Price:</strong> $@car.Price<br />
+                    </div>
+                    <div>
+                        @if (User.IsInRole("SuperAdmin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@car.CarId" class="btn btn-secondary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@car.CarId" class="btn btn-danger">Delete</a>
+                        }
+                        <a asp-action="Details" asp-route-id="@car.CarId" class="btn btn-success">Book</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else if (searchPerformed)
+    {
+        <p>No cars with the name or description "@searchString" were found.</p>
+    }
+    else
+    {
+        <p>No Cars available.</p>
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+            $("#SearchBtn").click(function () {
+                var SearchBy = $("#SearchBy").val();
+                var SearchValue = $("#Search").val();
+                var SetData = $(".cars-grid");
+                SetData.html(""); // Clear previous search results
+                $.ajax({
+                    type: "post",
+                    url: "/Home/GetCarSearchingData?SearchBy=" + SearchBy + "&SearchValue=" + SearchValue,
+                    contentType: "application/json",
+                    success: function (result) {
+                        console.log("Search result:", result); // Debugging statement
+                        if (result.length == 0) {
+                            SetData.append('<p style="color: red">No cars matching the search criteria were found.</p>');
+                        }
+                        else {
+                            $.each(result, function (index, value) {
+                                console.log("ImageName:", value.imageName); // Debugging statement
+                                var carCard = `
+                                    <div class="car-card">
+                                        <img src="/Images/Cars/${value.imageName}" class="car-image" />
+                                        <div>
+                                            <strong>Id:</strong> ${value.carId}<br />
+                                            <strong>Company:</strong> ${value.company}<br />
+                                            <strong>Model:</strong> ${value.carModel}<br />
+                                            <strong>Year:</strong> ${value.year}<br />
+                                            <strong>Price:</strong> ${value.price}<br />
+                                        </div>
+                                        <div>
+                                            <a href="/Home/Edit/${value.carId}" class="btn btn-secondary">Edit</a>
+                                            <a href="/Home/Delete/${value.carId}" class="btn btn-danger">Delete</a>
+                                            <a href="/Home/Details/${value.carId}" class="btn btn-success">Details</a>
+                                        </div>
+                                    </div>`;
+                                SetData.append(carCard);
+                            });
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("AJAX error:", error); // Debugging statement
+                    }
+                });
+            });
+        });</script>

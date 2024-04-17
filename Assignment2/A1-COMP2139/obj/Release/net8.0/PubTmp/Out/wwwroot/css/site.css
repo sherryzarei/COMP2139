@@ -1,0 +1,188 @@
+﻿/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set the body height to 100% of viewport height */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.form-control{
+    margin-right: 10px;
+    border-radius: 50px;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+    .search-form select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        
+        margin-right: 10px;
+    }
+
+    .search-form button {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 50px;
+        background-color: lightblue;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .search-form button:hover {
+            background-color: #218838;
+        }
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+/* Header Styles */
+.header {
+    border-bottom: 1px solid #dee2e6;
+    padding-top: 10px;
+}
+.navbar {
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue; /* Navbar background color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    color: white; /* Text color */
+}
+
+.navbar-title {
+    margin: 0; /* Remove default margin */
+}
+
+.navbar-left {
+    flex-grow: 1; /* Allow the title to take up remaining space */
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-link {
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove default underline */
+    margin-left: 10px; /* Add spacing between buttons */
+}
+
+    .navbar-link:hover {
+        color: lightgray; /* Text color on hover */
+    }
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Change the text color on hover */
+    background-color: #f8f9fa; /* Change the background color on hover */
+    border-radius: 5px; /* Optional: Add a border-radius for rounded corners */ 
+}
+
+#selectionbtn :hover {
+    color: #007bff;
+    background-color: #f8f9fa; 
+    border-radius: 5px;
+}
+
+.container-fluid main {
+    background-image: url('/assets/BackGround.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Footer Styles */
+/* Footer Styles */
+.footer {
+    padding: 10px 0; /* Reduce top and bottom padding */
+    background-color: #f8f9fa;
+    font-size: 0.9rem; /* Reduce font size */
+    height: 50px; /* Set a fixed height */
+    line-height: 50px; /* Center vertically */
+}
+
+    .footer a {
+        color: #6c757d;
+    }
+
+        .footer a:hover {
+            color: #343a40;
+        }
+
+.row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-4 {
+    max-width: 100%;
+}
+
+/* Ensuring that the form itself is not stretched too wide */
+form#account {
+    max-width: 330px;
+    margin: auto;
+}

@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .policy-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .policy-card {
+        width: 30%;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        backface-visibility:visible;
+        background-color: #E0FFFF;
+    }
+
+        .policy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .policy-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .policy-card h2 {
+            color: #333;
+        }
+
+        .policy-card p {
+            color: #666;
+        }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Explore, Book, Travel </h1>
+    <p>Find the perfect rental car, book flights, and discover comfortable accommodations for your next journey.</p>
+</div>
+
+<div class="policy-section">
+    <div class="policy-card">
+        <img style="height: 220px" src="assets/flight.jpeg" alt="Flight Policy">
+        <h2>Flight Policies</h2>
+        <p>Learn about our flight policies.</p>
+        <a id="flightBtn" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <div class="policy-card">
+        <img style="height: 220px" src="assets/car.jpeg" alt="Car Policy">
+        <h2>Car Policies</h2>
+        <p>Learn about our car rental policies.</p>
+        <a id="carBtn" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <div class="policy-card">
+        <img style="height: 220px" src="assets/hotelImage.jpeg" alt="Hotel Policy">
+        <h2>Hotel Policies</h2>
+        <p>Learn about our hotel booking policies.</p>
+        <a id="hotelBtn" class="btn btn-primary">Learn More</a>
+    </div>
+</div>
+
+<div id="flightModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Flight Policies</h2>
+        <p>Here are our flight policies:</p>
+        <strong>Cancellation:</strong>
+        <p>
+            Customers may cancel their flight bookings up to
+            24 hours before the scheduled departure time to receive a full refund.
+            Cancellations made after this deadline may be subject to a cancellation fee.
+        </p>
+        <strong>Refund Process:</strong>
+        <p>
+            Refunds for canceled flights will be processed within 3 days of the cancellation request.
+            Please note that refunds will be issued to the original form of payment used for the booking.
+        </p>
+    </div>
+</div>
+
+<div id="hotelModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Hotel Policies</h2>
+        <p>Here are our Hotel policies:</p>
+        <strong>Reservation Options:</strong>
+        <p>
+            Customers may make hotel reservations through our website, mobile app, or by
+            contacting our reservations department directly.
+            Reservations are subject to availability and confirmation.
+        </p>
+        <strong>Cancellation Deadline:</strong>
+        <p>
+            Customers may cancel their hotel reservations up to 2 days before the scheduled
+            check-in date to receive a full refund.
+            Cancellations made after this deadline may be subject to a cancellation fee.
+        </p>
+    </div>
+</div>
+
+<div id="carModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Rental Car Policies</h2>
+        <p>Here are our Rental Car policies:</p>
+        <strong>Pickup Time:</strong>
+        <p>
+            Customers should arrive at the designated pickup location at least 5 minutes
+            before the scheduled pickup time. Late arrivals may result in delays or additional charges
+        </p>
+        <strong>Vehicle Inspection:</strong>
+        <p>
+            Upon vehicle pickup, customers will undergo a brief inspection to document the
+            vehicle's condition and any pre-existing damage.
+            Please report any discrepancies to our staff immediately.
+        </p>
+    </div>
+</div>
+
+<script src="~/js/site.js"></script>

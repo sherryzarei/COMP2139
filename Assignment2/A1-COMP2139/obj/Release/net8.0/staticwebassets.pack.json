@@ -1,0 +1,585 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\A1-COMP2139.bundle.scp.css",
+      "PackagePath": "staticwebassets\\A1-COMP2139.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\1 Mercedes AMG GT243754516.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\1 Mercedes AMG GT243754516.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\2024-tesla-roadster-carbuzz-847781241505826.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\2024-tesla-roadster-carbuzz-847781241505826.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\2024_Subaru_Crosstrek_Onyx_in_Sapphire_Blue_Pearl,_Front_Left,_07-12-2023243435471.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\2024_Subaru_Crosstrek_Onyx_in_Sapphire_Blue_Pearl,_Front_Left,_07-12-2023243435471.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\2024_Subaru_Crosstrek_Onyx_in_Sapphire_Blue_Pearl,_Front_Left,_07-12-2023243503624.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\2024_Subaru_Crosstrek_Onyx_in_Sapphire_Blue_Pearl,_Front_Left,_07-12-2023243503624.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\2024_Subaru_Crosstrek_Onyx_in_Sapphire_Blue_Pearl,_Front_Left,_07-12-2023243503624245826910.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\2024_Subaru_Crosstrek_Onyx_in_Sapphire_Blue_Pearl,_Front_Left,_07-12-2023243503624245826910.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\8c15c79a1a2a55f91b6fb4e5bef5e277241823691.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\8c15c79a1a2a55f91b6fb4e5bef5e277241823691.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\8c15c79a1a2a55f91b6fb4e5bef5e277242853369.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\8c15c79a1a2a55f91b6fb4e5bef5e277242853369.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\8c15c79a1a2a55f91b6fb4e5bef5e277243538190.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\8c15c79a1a2a55f91b6fb4e5bef5e277243538190.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\b24_bprbe_fl1_0040_a240021562.png",
+      "PackagePath": "staticwebassets\\Images\\Cars\\b24_bprbe_fl1_0040_a240021562.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c1241744094.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c1241744094.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c1241744094245914350.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c1241744094245914350.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c1243324227.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c1243324227.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c1243408179.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c1243408179.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c2241149704.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c2241149704.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c2241149704243430237.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c2241149704243430237.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c2243310912.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c2243310912.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c2243337963.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c2243337963.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\c2243636268.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c2243636268.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\f1dd312742a2faf417c53bcd023d6f3dx240055842.png",
+      "PackagePath": "staticwebassets\\Images\\Cars\\f1dd312742a2faf417c53bcd023d6f3dx240055842.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\f1dd312742a2faf417c53bcd023d6f3dx240055842245716860.png",
+      "PackagePath": "staticwebassets\\Images\\Cars\\f1dd312742a2faf417c53bcd023d6f3dx240055842245716860.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\f1dd312742a2faf417c53bcd023d6f3dx245253241.png",
+      "PackagePath": "staticwebassets\\Images\\Cars\\f1dd312742a2faf417c53bcd023d6f3dx245253241.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\p90462506-1652716148241823003.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\p90462506-1652716148241823003.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\p90462506-1652716148245206140.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\p90462506-1652716148245206140.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Cars\\p90462506-1652716148245206140245801590.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\p90462506-1652716148245206140245801590.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo240010654.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo240010654.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo240010654242605654.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo240010654242605654.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo241635609.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo241635609.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo241954743.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo241954743.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo241954743245325096.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo241954743245325096.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo242301858.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo242301858.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo242831091.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo242831091.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Air-Canada-Logo245727881.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Air-Canada-Logo245727881.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Emirates-Logo-500x313242124433.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Emirates-Logo-500x313242124433.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Emirates-Logo-500x313242629235.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Emirates-Logo-500x313242629235.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Emirates-Logo-500x313242629235245238953.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Emirates-Logo-500x313242629235245238953.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Emirates-Logo-500x313242629235245450419.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Emirates-Logo-500x313242629235245450419.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Lufthansa-Logo.wine241739085.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Lufthansa-Logo.wine241739085.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Lufthansa-Logo.wine241739085245555933.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Lufthansa-Logo.wine241739085245555933.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Lufthansa-Logo.wine241851014.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Lufthansa-Logo.wine241851014.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Lufthansa-Logo.wine242413062.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Lufthansa-Logo.wine242413062.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Lufthansa-Logo.wine243217509.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Lufthansa-Logo.wine243217509.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\Lufthansa-Logo.wine243217509241238788.png",
+      "PackagePath": "staticwebassets\\Images\\Flights\\Lufthansa-Logo.wine243217509241238788.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Flights\\p90462506-1652716148245401806.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Flights\\p90462506-1652716148245401806.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\1242816503.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\1242816503.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\1242816503240126378.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\1242816503240126378.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\1242816503243001903.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\1242816503243001903.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\1244737472.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\1244737472.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\2024-02-17242938027.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\2024-02-17242938027.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\2024-02-17242938027240203583.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\2024-02-17242938027240203583.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\2244615821.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\2244615821.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\3244835287.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\3244835287.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277241347361.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277241347361.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277242116699.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277242116699.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277242712781.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277242712781.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277244841614.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\8c15c79a1a2a55f91b6fb4e5bef5e277244841614.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\Air-Canada-Logo241203078.png",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\Air-Canada-Logo241203078.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\ComputerScience240142545.webp",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\ComputerScience240142545.webp"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\ComputerScience245539818.webp",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\ComputerScience245539818.webp"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\ComputerScience245716535.webp",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\ComputerScience245716535.webp"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\Picture1243243089.png",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\Picture1243243089.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\X8eGM240003953.png",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\X8eGM240003953.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\download245034126.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\download245034126.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\download245034126240453459.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\download245034126240453459.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\download245034126240532295.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\download245034126240532295.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\exterior242528708.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\exterior242528708.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\exterior243615739.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\exterior243615739.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\exterior243615739245746981.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\exterior243615739245746981.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\exterior244256807.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\exterior244256807.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\hierarchy-of-collection-framework-in-java244711569.webp",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\hierarchy-of-collection-framework-in-java244711569.webp"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\Images\\Hotels\\unnamed243128023.jpg",
+      "PackagePath": "staticwebassets\\Images\\Hotels\\unnamed243128023.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\BackGround.jpeg",
+      "PackagePath": "staticwebassets\\assets\\BackGround.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\Emirates.png",
+      "PackagePath": "staticwebassets\\assets\\Emirates.png"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\car.jpeg",
+      "PackagePath": "staticwebassets\\assets\\car.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\carImage.jpeg",
+      "PackagePath": "staticwebassets\\assets\\carImage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\flight.jpeg",
+      "PackagePath": "staticwebassets\\assets\\flight.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\flightImage.webp",
+      "PackagePath": "staticwebassets\\assets\\flightImage.webp"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\assets\\hotelImage.jpeg",
+      "PackagePath": "staticwebassets\\assets\\hotelImage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\js\\carComment.js",
+      "PackagePath": "staticwebassets\\js\\carComment.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\js\\flightComment.js",
+      "PackagePath": "staticwebassets\\js\\flightComment.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\js\\hotelComment.js",
+      "PackagePath": "staticwebassets\\js\\hotelComment.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Somi\\Desktop\\Semester 4\\ASP.NET\\Assignment2\\A1-COMP2139\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.A1-COMP2139.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.A1-COMP2139.props",
+      "PackagePath": "build\\A1-COMP2139.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.A1-COMP2139.props",
+      "PackagePath": "buildMultiTargeting\\A1-COMP2139.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.A1-COMP2139.props",
+      "PackagePath": "buildTransitive\\A1-COMP2139.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using A1_COMP2139.Models.ViewModels
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">A1-COMP2139</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1 justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-house-door-fill"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Flight" asp-action="Index">
+                        <i class="fa-solid fa-plane-circle-check"></i>
+                        Flights
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Hotel" asp-action="Index">
+                        <i class="fa-solid fa-hotel"></i>
+                        Hotels
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Car" asp-action="Index">
+                        <i class="fa-solid fa-car"></i>
+                        Rental Cars
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">
+                        <i class="fa-solid fa-circle-info"></i>
+                        About
+                    </a>
+                </li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    @await Component.InvokeAsync("UserRole")
+                    <li class="nav-item d-flex align-items-center">
+
+                        @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+                        {
+                            <img id="profilePicture" style="width: 40px; height:40px; object-fit:cover; border-radius: 20px; object-fit:cover; margin-right: 2px"
+                                 src="data:image/*; base64, @(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))" />
+                        }
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage your account">
+                            Hello @User.Identity?.Name
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                            <button type="submit" class="btn btn-link nav-link text-danger" style="cursor: pointer">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    //login
+                    <li class="nav-link">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login" style="padding: 0;">
+                            <i class="fa-solid fa-right-to-bracket"></i> Login
+                        </a>
+                    </li>
+
+                    //register
+                    <li class="nav-link">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register" style="padding: 0;">
+                            <i class="fa fa-user-plus"></i> Register
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

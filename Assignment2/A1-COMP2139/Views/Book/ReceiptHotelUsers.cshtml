@@ -1,0 +1,58 @@
+﻿@model Book
+
+@{
+    ViewData["Title"] = "Flight Receipt";
+}
+
+<h2>Receipt</h2>
+<div style="padding: 20px 80px">
+
+    <div>
+        <h4>Receipt Details</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Quote:</dt>
+            <dd class="col-sm-9">@Model.ReceiptNumber</dd>
+
+            <dt class="col-sm-3">HotelName:</dt>
+            <dd class="col-sm-9">@Model.Hotel.HotelName</dd>
+
+            <dt class="col-sm-3">Location:</dt>
+            <dd class="col-sm-9">@Model.Hotel.Location</dd>
+
+            <dt class="col-sm-3">Amenities:</dt>
+            <dd class="col-sm-9">@Model.Hotel.Amenities</dd>
+
+            <dt class="col-sm-3">Availability:</dt>
+            <dd class="col-sm-9">@Model.Hotel.Availability</dd>
+
+            <dt class="col-sm-3">Price:</dt>
+            <dd class="col-sm-9">$@Model.Hotel.Price</dd>
+        </dl>
+    </div>
+
+    <div>
+        <h4>User Information</h4>
+        <dl class="row">
+            <dt class="col-sm-3">UserName:</dt>
+            <dd class="col-sm-9">@Model.Username</dd>
+        </dl>
+    </div>
+
+    <style>
+        button.print-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 50%;
+        }
+
+            button.print-btn:hover {
+                background-color: #0056b3;
+            }
+    </style>
+    <button class="print-btn" onclick="window.print()">Print</button>
+</div>

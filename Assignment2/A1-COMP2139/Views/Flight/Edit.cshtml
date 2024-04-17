@@ -1,0 +1,50 @@
+﻿@model Flight
+@{
+    ViewData["Title"] = "Edit Flight";
+}
+<div style="padding: 20px 80px">
+    <h2>Edit Flight</h2>
+
+    <form asp-controller="Flight" asp-action="Edit" method="post">
+        @Html.HiddenFor(model => model.FlightId)
+
+        <div class="form-group">
+            <label asp-for="Airline" class="control-label">Airline</label>
+            <input asp-for="Airline" class="form-control" />
+            <span asp-validation-for="Airline" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Departure" class="control-label">Departure</label>
+            <input asp-for="Departure" class="form-control" />
+            <span asp-validation-for="Departure" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Arrival" class="control-label">Arrival</label>
+            <input asp-for="Arrival" class="form-control" />
+            <span asp-validation-for="Arrival" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="control-label">Price</label>
+            <input asp-for="Price" type="number" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageFile" class="control-label">Flight Image</label>
+            <input asp-for="ImageFile" class="form-control-file" type="file" />
+            @if (Model.ImageName != null)
+            {
+                <img src="@Url.Content("~/Images/Flights/" + Model.ImageName)" width="150" alt="Car Image" />
+            }
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>

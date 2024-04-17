@@ -1,0 +1,61 @@
+﻿@model Book
+
+@{
+    ViewData["Title"] = "Car Receipt";
+}
+
+<h2>Receipt</h2>
+<div style="padding: 20px 80px">
+
+    <div>
+        <h4>Receipt Details</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Quote:</dt>
+            <dd class="col-sm-9">@Model.ReceiptNumber</dd>
+
+            <dt class="col-sm-3">Rental Company:</dt>
+            <dd class="col-sm-9">@Model.Car.RentalCompany</dd>
+
+            <dt class="col-sm-3">Manufacturer:</dt>
+            <dd class="col-sm-9">@Model.Car.Manufacturer</dd>
+
+            <dt class="col-sm-3">Model:</dt>
+            <dd class="col-sm-9">@Model.Car.Model</dd>
+
+            <dt class="col-sm-3">Year:</dt>
+            <dd class="col-sm-9">@Model.Car.Year</dd>
+
+            <dt class="col-sm-3">Price:</dt>
+            <dd class="col-sm-9">@Model.Car.Price</dd>
+        </dl>
+    </div>
+
+    <div>
+        <h4>Guest Information</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Email:</dt>
+            <dd class="col-sm-9">@Model.GuestEmail</dd>
+
+            <dt class="col-sm-3">Phone:</dt>
+            <dd class="col-sm-9">@Model.GuestNumber</dd>
+        </dl>
+    </div>
+
+    <style>
+        button.print-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 50%;
+        }
+
+            button.print-btn:hover {
+                background-color: #0056b3;
+            }
+    </style>
+    <button class="print-btn" onclick="window.print()">Print</button>
+</div>
